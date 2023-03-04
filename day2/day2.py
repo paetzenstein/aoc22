@@ -1,42 +1,47 @@
 
-## Rock A(elf); X(me); Score = 1
-## Paper B(elf) Y(me); Score = 2
-## Scissor C(elf) Z(me); Score = 3
-## Win = 6; Draw = 3; Lose = 0
+"""
+Rock: 1
+Paper: 2
+Scissors: 3
+
+Lose: 0     // X
+Draw: 3     // Y
+Win: 6      // Z
+"""
 if __name__=="__main__":
     f = open("input_day2","r")
     lines = f.readlines()
     score = 0
     def game(elf_input, my_input):
-        if (elf_input == "A"):
-            if (my_input == "X"):
-                return 4
-            elif (my_input == "Y"):
-                return 8
-            elif (my_input == "Z"):
+        if (my_input == "X"):
+            if (elf_input == "A"):
                 return 3
-            else:
-                print("invalid input")
-        if (elf_input == "B"):
-            if (my_input == "X"):
+            elif (elf_input == "B"):
                 return 1
-            elif (my_input == "Y"):
-                return 5
-            elif (my_input == "Z"):
-                return 9
-            else:
-                print("invalid input")
-        if (elf_input == "C"):
-            if (my_input == "X"):
-                return 7
-            elif (my_input == "Y"):
+            elif (elf_input == "C"):
                 return 2
-            elif (my_input == "Z"):
+            else:
+                print("invalid input_day3")
+        if (my_input == "Y"):
+            if (elf_input == "A"):
+                return 4
+            elif (elf_input == "B"):
+                return 5
+            elif (elf_input == "C"):
                 return 6
             else:
-                print("invalid input")
+                print("invalid input_day3")
+        if (my_input == "Z"):
+            if (elf_input == "A"):
+                return 8
+            elif (elf_input == "B"):
+                return 9
+            elif (elf_input == "C"):
+                return 7
+            else:
+                print("invalid input_day3")
         else:
-            print("invalid input")
+            print("invalid input_day3")
 
     for line in lines:
         line = line.strip()
